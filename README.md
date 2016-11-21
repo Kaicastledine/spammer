@@ -1,4 +1,4 @@
-# Gmail spammer
+# Email spammer
 This is my first python project
 
 [ It works best with python 2.7 ]
