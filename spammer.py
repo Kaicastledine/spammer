@@ -1,11 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#mailspammer by Incognito04
+# mail spammer by Incognito04
 
+import platform
 import smtplib
 import getpass
 import time
+import os
 
 def name():
     print """\033[35m""" + """
@@ -18,12 +20,18 @@ def name():
                           | |                                        
                           |_|                                        
 
-A simple but high speed email spammer   
+\033[35m A simple but high speed email spammer   
+
+\033[38m[---]\033[35m                 Email_spammer		   \033[38m[---]
+\033[34m[---]\033[35m        Created by: incognito04               \033[34m[---]
+\033[35m[---]\033[35m                 Version: 1.1.0               \033[35m[---]
+\033[32m[---]\033[33m        Codename: Less errors and gliches     \033[32m[---]
+
  """
     
     try:
 	try:
-	    email = raw_input('\033[36m' + 'gmail_email_address> ')
+	    email = raw_input('\033[36m' + 'gmail_email_address > ')
 	    password = getpass.getpass('password > ')
 	    spoofed_mail = raw_input('spoofed email > ')
 	    sender = raw_input('email of reciever > ')
@@ -43,20 +51,27 @@ A simple but high speed email spammer
 	server.starttls()
 	server.login(email, password)
     except:
-	print('\033[31m' + '\n[*]Make sure you are connected to the internet.')
+	print('\033[31m' + '\n[-]Make sure you are connected to the internet and that the information you supplied is correct.')
     
     try:
 	for i in range (0,time):
     		server.sendmail(spoofed_mail, sender, msg)
-		print('\033[36m' + '\n[*] Mail sent')
-        server.quit()
-    except UnboundLocalError:
-	pass
-    try:
-	name()
-    except KeyboardInterrupt:
-    	print("\n\nGoodbye ;)")
+        	print('\033[36m' + '\n[*] Mail sent.')
+        server.quit()    
+    except:
+	('\033[31m' + '\n[-] Email failed to send.')
 
+    if platform.system() == ("Linux"):
+	os.system("clear")
+
+    if platform.system() == ("Windows"):
+	os.system("cls")	
+    	
+    try:
+        name()
+    except KeyboardInterrupt:
+	print('\033[36m''\n\nGoodbye ;)')
+    
+	
 name()
     
-
