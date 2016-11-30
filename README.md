@@ -1,6 +1,9 @@
 # Email spammer
 This is my first python project
 
+Please note to excecute please type python spammer.py
+and it may have some bugs running on windows os
+
 [ It works best with python 2.7 ]
  
 This is my first python project and is basically a Email Spammer 
