@@ -24,5 +24,5 @@ For next update ...
 
                                        Email_spammer		   
                              Created by: incognito04               
-                                      Version: 2.1.0           
+                                      Version: 2.5.0           
                    Codename: Looks nicer and less bugs    
