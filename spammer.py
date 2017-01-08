@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # mail spammer by Incognito04
+# Version 2.5
+#codename: less bugs and looks nicer
 
 import platform
 import smtplib
